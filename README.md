@@ -1,8 +1,6 @@
 
 # SAVI Testbed APIs
 
-## List Endpoints
-
 This repository provides guidelines for available APIs to access the SAVI testbed.
 
 > **Note:** You will need to route your traffic through **client1** *(i.e. client1.savitestbed.ca)* machine 
