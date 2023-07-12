@@ -10,7 +10,7 @@ This repository provides guidelines for available APIs to access the SAVI testbe
 
 
 ## Authentication
-Once you have obtained the endpoints and ensured that you have access to them, attempt to call the `keystone` endpoint: `http://iamv3.savitestbed.ca:5000/v3`. First, create a file named `credentials.json` and place the following json data inside it:
+The `keystone` endpoint is `http://iamv3.savitestbed.ca:5000/v3`. To get authenticated, first, create a file named `credentials.json` and place the following json data inside it:
 ```json
 { "auth": {
     "identity": {
@@ -39,7 +39,7 @@ curl -H "Content-Type: application/json" \
    --location '{{KEYSTONE_URI}}/auth/tokens' \
    --data @credentials.json -D headers.txt
 ```
-Please make a note of your `user ID` and `project ID` from the output. To retrieve the token value, locate the `headers.txt` file and find the value of the `X-Subject-Token` field within it.
+Please make a note of your `user ID` and `project ID` from the output. To retrieve the token value, locate the `headers.txt` file and find the value of the `X-Subject-Token` field within it. You also get a list of endpoints associated to other available services such as `glance`, `nova`, etc.
 
 ## Sample Call using the Token
 Replace the `TOKEN` and `USER_ID` in the following command:
